@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "No Shorts for YouTube",
+    "version": "1.0",
+    "description": "Полностью убирает раздел Shorts с YouTube: боковое меню, рекомендации и заголовки.",
+    "icons": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "permissions": [
+      "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.youtube.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+}
+  
